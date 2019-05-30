@@ -1,8 +1,13 @@
 # SuroObserver
+## DISCLAIMER, Dies ist aktuell keine 100% fertige version. Bugs wird es geben & ist noch nicht zur aktiven nutzung vorgesehen. Weil dies ein Projekt ist, was ich nur in rahmen meiner Freizeit pflegen kann. Ihr könnt gerne zu dem Projekt beitragen ist schließlich nicht umsonst und auf github, für jeden zugänglich :D .
+
 Erklärung: 
 SuroObserver ist eine webseite mit der man alle geschehen rund um das minecraft pvp projekt von ungespielt, verfolgen kann.
 
 Wenn du lust hast mit zu helfen, kannst du dies in dem du deine anmerkungen auf github als  Issue erstellst. Oder auf Twitter @CreedGamesOA #SuroObserver  mir zukommen lässt. 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/12efb4f5-79c3-4706-ab23-970fabc4006f/deploy-status)](https://suroobserver.creedscode.cc/)
+^  zur webseite bzw. https://suroobserver.creedscode.cc/
 
 ## Project setup
 

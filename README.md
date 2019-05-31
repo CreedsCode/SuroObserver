@@ -1,4 +1,4 @@
-# SuroObserver
+# SuroObserver - Pilot!
 ## DISCLAIMER, Das ist aktuell keine 100% fertige version. Bugs wird es geben & ist noch nicht zur aktiven nutzung vorgesehen. Weil dies ein Projekt ist, was ich nur in rahmen meiner Freizeit pflegen kann. Ihr könnt gerne zu dem Projekt beitragen ist schließlich nicht umsonst und auf github, für jeden zugänglich :D .
 
 Erklärung: 

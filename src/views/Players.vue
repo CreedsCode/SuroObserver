@@ -46,9 +46,6 @@ export default {
     return {
     }
   },
-  mounted () {
-    this.$store.dispatch('loadPlayers')
-  },
   computed: {
     ...mapState([
       'players'

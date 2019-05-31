@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Players from './views/Players.vue'
+import Streams from './views/Streams.vue'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/players',
       name: 'players',
       component: Players
+    },
+    {
+      path: '/streams',
+      name: 'streams',
+      component: Streams
     },
     {
       path: '/about',

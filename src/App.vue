@@ -23,7 +23,7 @@
       </v-btn>
       <v-btn
         flat
-        to="/TODO"
+        to="/streams"
       >
         <span class="mr-2">Streams</span>
       </v-btn>
@@ -58,6 +58,9 @@ export default {
     return {
       //
     }
+  },
+  mounted () {
+    this.$store.dispatch('loadPlayers')
   }
 }
 </script>

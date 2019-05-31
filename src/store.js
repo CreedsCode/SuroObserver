@@ -83,6 +83,26 @@ export default new Vuex.Store({
   getters: {
     casters: state => {
       return state.players.filter(player => player.role.name === 'Caster')
+    },
+    PlayerStreamPlatforms: state => {
+      // Gets only the stream information for the streams site and sorts out all the dead players.
+      var result = []
+
+      for (let index = 0; index < state.players.length; index++) {
+        const player = state.players[index]
+        if (player.isAlive() === false) {
+          continue
+        }
+        var PlayerStream = {
+          name: player.name,
+          youtube: player.youtube,
+          twitch: player.twitch
+        }
+
+        result.push(PlayerStream)
+      }
+
+      return result
     }
   }
 })

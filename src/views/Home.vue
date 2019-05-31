@@ -39,13 +39,6 @@ export default {
     }
   },
   mounted () {
-    var embed = new Twitch.Embed('twitch-embed', {
-      width: 854,
-      height: 480,
-      channel: 'halbzwilling',
-      layout: 'video',
-      autoplay: false
-    })
   }
 }
 </script>

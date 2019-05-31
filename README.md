@@ -1,5 +1,5 @@
 # SuroObserver
-## DISCLAIMER, Dies ist aktuell keine 100% fertige version. Bugs wird es geben & ist noch nicht zur aktiven nutzung vorgesehen. Weil dies ein Projekt ist, was ich nur in rahmen meiner Freizeit pflegen kann. Ihr könnt gerne zu dem Projekt beitragen ist schließlich nicht umsonst und auf github, für jeden zugänglich :D .
+## DISCLAIMER, Das ist aktuell keine 100% fertige version. Bugs wird es geben & ist noch nicht zur aktiven nutzung vorgesehen. Weil dies ein Projekt ist, was ich nur in rahmen meiner Freizeit pflegen kann. Ihr könnt gerne zu dem Projekt beitragen ist schließlich nicht umsonst und auf github, für jeden zugänglich :D .
 
 Erklärung: 
 SuroObserver ist eine webseite mit der man alle geschehen rund um das minecraft pvp projekt von ungespielt, verfolgen kann.

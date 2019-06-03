@@ -17,17 +17,21 @@ export default new Vuex.Store({
   actions: {
     loadPlayers ({ commit }) {
       var players = []
-      axios.get(`https://sheets.googleapis.com/v4/spreadsheets/18-ObnorDG1i50_p22596wFiXqihp4dI74h6-DY2fbAQ/values/A9%3AI120?dateTimeRenderOption=FORMATTED_STRING&majorDimension=ROWS&valueRenderOption=UNFORMATTED_VALUE&key=${apiKey}`)
-        .then((result) => {
-          // => [0],..[1],..[2],..[3],..[4],..[5],..[6],.....[7]
-          //    name     mc     dead   yt  yturl twitch twitter insta
+      axios
+        .get(
+          `https://sheets.googleapis.com/v4/spreadsheets/1ZCyXyOlXvyb3EfK_7TDZpIV2OokDxtCQNTe5C4Q9lLQ/values/OperatingData!A2%3AI110?dateTimeRenderOption=FORMATTED_STRING&majorDimension=ROWS&valueRenderOption=UNFORMATTED_VALUE&key=${apiKey}`
+        )
+        .then(result => {
+          // => [0],..[1],..[2],..[3],..[4],..[5],..[6],.....[7].........[8]
+          //    name     mc     dead   yt  yturl twitch twitter insta   deathclipid(twitchid)
           result.data.values.forEach(element => {
             var player = {
               name: element[0],
               minecraft: element[1],
               deathDateTime: element[2],
+              daethTwitchClipId: element[8],
               deathDate: function () {
-                return (new Date(element[2]))
+                return new Date(element[2])
               },
               isAlive: function () {
                 if (this.deathDateTime === '') {
@@ -59,8 +63,8 @@ export default new Vuex.Store({
               },
               getRole: function () {
                 var role = { name: 'Player' }
-                if (element[0][(element[0].length - 1)] === '*') {
-                  console.log(element[0][(element[0].length - 1)])
+                if (element[0][element[0].length - 1] === '*') {
+                  console.log(element[0][element[0].length - 1])
                   role.name = 'Caster'
                   // remove * at the end of the name.
                   this.name = this.name.split('*')[0]
@@ -75,7 +79,8 @@ export default new Vuex.Store({
             players.push(player)
           })
           commit('SET_PLAYERS', players)
-        }).catch((err) => {
+        })
+        .catch(err => {
           console.log(err)
         })
     }
@@ -108,9 +113,9 @@ export default new Vuex.Store({
 })
 
 /*
-*                                     spreadsheetId=>
-* Google Doc: https://docs.google.com/spreadsheets/d/18-ObnorDG1i50_p22596wFiXqihp4dI74h6-DY2fbAQ/htmlview?sle=true#gid=0
-* Api Base: https://sheets.googleapis.com/v4/spreadsheets/spreadsheetId/values/Sheet1!A1:A5
-*
-* api url: https://sheets.googleapis.com/v4/spreadsheets/18-ObnorDG1i50_p22596wFiXqihp4dI74h6-DY2fbAQ/values/Sheet1!A1:D5
-*/
+ *                                     spreadsheetId=>
+ * Google Doc: https://docs.google.com/spreadsheets/d/18-ObnorDG1i50_p22596wFiXqihp4dI74h6-DY2fbAQ/htmlview?sle=true#gid=0
+ * Api Base: https://sheets.googleapis.com/v4/spreadsheets/spreadsheetId/values/Sheet1!A1:A5
+ *
+ * api url: https://sheets.googleapis.com/v4/spreadsheets/18-ObnorDG1i50_p22596wFiXqihp4dI74h6-DY2fbAQ/values/Sheet1!A1:D5
+ */

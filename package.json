@@ -1,5 +1,5 @@
 {
-  "name": "SuroObserver",
+  "name": "suroobserver",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -38,7 +38,10 @@
     "env": {
       "node": true
     },
-    "extends": ["plugin:vue/essential", "@vue/standard"],
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
@@ -49,11 +52,19 @@
       "autoprefixer": {}
     }
   },
-  "browserslist": ["> 1%", "last 2 versions"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,vue}": ["vue-cli-service lint", "git add"]
-  }
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "description": ""
 }
